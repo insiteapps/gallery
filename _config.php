@@ -1,3 +1,3 @@
 <?php
 
-define('SIMPLE_GALLERY',basename(dirname(__FILE__)));
+define('INSITEAPPS_GALLERY_DIR',basename(dirname(__FILE__)));

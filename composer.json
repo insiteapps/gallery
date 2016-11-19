@@ -1,5 +1,5 @@
 {
-  "name": "insiteapps/faq",
+  "name": "insiteapps/gallery",
   "description": "Silverstripe Insite Apps (south africa) faq pages",
   "type": "silverstripe-module",
   "keywords": [
@@ -17,6 +17,6 @@
     "silverstripe/cms": "3.*"
   },
   "extra": {
-    "installer-name": "insiteapps-faqs"
+    "installer-name": "insiteapps-gallery"
   }
 }
