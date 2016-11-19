@@ -1,0 +1,22 @@
+{
+  "name": "insiteapps/faq",
+  "description": "Silverstripe Insite Apps (south africa) faq pages",
+  "type": "silverstripe-module",
+  "keywords": [
+    "insite"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Itayi Patrick Chitovoro",
+      "email": "patrick@chitosystems.com"
+    }
+  ],
+  "require": {
+    "silverstripe/framework": "3.*",
+    "silverstripe/cms": "3.*"
+  },
+  "extra": {
+    "installer-name": "insiteapps-faqs"
+  }
+}
