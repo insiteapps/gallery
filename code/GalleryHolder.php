@@ -10,29 +10,32 @@ class GalleryHolder extends Page
         'SingleGallery' => 'Boolean',
         "GalleryLayout" => "Enum('List,Masonry','List')",
         "Columns" => "Int",
-        "Type" => "Enum('Items,Category','Items')",
+        //"Type" => "Enum('Items,Category','Items')",
     );
     public static $has_many = array();
     public static $has_one = array();
     public static $defaults = array();
 
+
+    function getPageSetupFields()
+    {
+        $fields = CompositeField::create(
+            CheckboxField::create("SingleGallery"),
+            CheckboxField::create("ShowCaption"),
+            DropdownField::create("GalleryLayout")
+                ->setSource($this->dbObject("GalleryLayout")->enumValues()),
+            DropdownField::create("Columns")->setSource(self::getColumnEnums())
+        );
+        return $fields;
+    }
+
     public function getCMSFields()
     {
         $f = parent::getCMSFields();
 
-        $Type = DropdownField::create("Type")
-            ->setSource($this->dbObject("Type")->enumValues());
-
-        $layout = DropdownField::create("GalleryLayout")
-            ->setSource($this->dbObject("GalleryLayout")->enumValues());
-
-        $f->addFieldsToTab('Root.Main', ToggleCompositeField::create('GalleryConfiguration', 'Gallery configuration',
-            array(
-                $Type,
-                $layout
-            )
-        )->setHeadingLevel(4));
-
+        $setup = PageSetupBar::create('Setup', $this->getPageSetupFields());
+        $f->insertBefore($setup, 'Root');
+        $f->fieldByName('Root')->setTemplate('PageSetupBar');
 
         return $f;
     }
@@ -93,7 +96,8 @@ class GalleryHolder_Controller extends Page_Controller
     {
         parent::init();
 
-
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
 
     }
 
