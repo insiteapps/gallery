@@ -1,5 +1,9 @@
 <?php
 
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
+use SilverStripe\Forms\GridField\GridField;
+
 class Gallery extends Page {
 
     public static $icon = 'simple_gallery/images/treeicons/news';
@@ -30,7 +34,7 @@ class Gallery extends Page {
 
 }
 
-class Gallery_Controller extends Page_Controller {
+class GalleryController extends PageController {
 
     public function init() {
         parent::init();

@@ -1,5 +1,11 @@
 <?php
 
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\CompositeField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\View\Requirements;
+
 class GalleryHolder extends Page
 {
 
@@ -89,7 +95,7 @@ class GalleryHolder extends Page
     }
 }
 
-class GalleryHolder_Controller extends Page_Controller
+class GalleryHolderController extends PageController
 {
 
     public function init()

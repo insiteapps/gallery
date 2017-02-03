@@ -13,8 +13,8 @@
     }
   ],
   "require": {
-    "silverstripe/framework": ">=3.2",
-    "silverstripe/cms": ">=3.2"
+    "silverstripe/framework": "^4.0@dev",
+    "silverstripe/cms": "^4.0@dev"
   },
   "extra": {
     "installer-name": "insiteapps-gallery"
