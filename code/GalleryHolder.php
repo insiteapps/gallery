@@ -17,7 +17,7 @@ class GalleryHolder extends Page
     public static $defaults = array();
 
 
-    function getPageSetupFields()
+    function getGalleryPageSetupFields()
     {
         $fields = CompositeField::create(
             CheckboxField::create("SingleGallery"),
@@ -33,7 +33,7 @@ class GalleryHolder extends Page
     {
         $f = parent::getCMSFields();
 
-        $setup = PageSetupBar::create('Gallery', $this->getPageSetupFields());
+        $setup = PageSetupBar::create('Gallery', $this->getGalleryPageSetupFields());
         $f->insertBefore($setup, 'Root');
         $f->fieldByName('Root')->setTemplate('PageSetupBar');
 
