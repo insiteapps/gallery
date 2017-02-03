@@ -24,14 +24,15 @@ class GalleryHolder extends Page
 
     public function getPageSetupFields()
     {
-        $fields = CompositeField::create(
+        $fields = self::getDefaultPageSetupFields();
+        $fields->push(CompositeField::create(
             HeaderField::create("Gallery", 3),
             CheckboxField::create("SingleGallery"),
             CheckboxField::create("ShowCaption"),
             DropdownField::create("GalleryLayout")
                 ->setSource($this->dbObject("GalleryLayout")->enumValues()),
             DropdownField::create("Columns")->setSource(self::getColumnEnums())
-        );
+        ));
 
         return $fields;
     }
