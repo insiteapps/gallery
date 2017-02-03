@@ -33,7 +33,7 @@ class GalleryHolder extends Page
     {
         $f = parent::getCMSFields();
 
-        $setup = PageSetupBar::create('Setup', $this->getPageSetupFields());
+        $setup = PageSetupBar::create('Gallery', $this->getPageSetupFields());
         $f->insertBefore($setup, 'Root');
         $f->fieldByName('Root')->setTemplate('PageSetupBar');
 
