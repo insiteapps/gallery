@@ -89,7 +89,7 @@ class GalleryHolder extends Page
     }
 }
 
-class GalleryHolderController extends PageController
+class GalleryHolder_Controller extends Page_Controller
 {
 
     public function init()

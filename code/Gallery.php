@@ -34,7 +34,7 @@ class Gallery extends Page {
 
 }
 
-class GalleryController extends PageController {
+class Gallery_Controller extends Page_Controller {
 
     public function init() {
         parent::init();
