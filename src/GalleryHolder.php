@@ -8,11 +8,11 @@ class GalleryHolder extends Page
     public static $allowed_children = array("GalleryPage");
 
     public static $db = array(
-        'ShowCaption' => 'Boolean',
+        'ShowCaption'   => 'Boolean',
         'SingleGallery' => 'Boolean',
-        "GalleryLayout" => "Enum('List,Masonry','List')",
-        "Columns" => "Int",
-        "Style" => "Enum('NoSpace,Normal,SmallPadding','Normal')",
+        "GalleryLayout" => "Enum('ListGallery,MasonryGallery,LightGallery','ListGallery')",
+        "Columns"       => "Int",
+        "Style"         => "Enum('NoSpace,Normal,SmallPadding','Normal')",
         //"Type" => "Enum('Items,Category','Items')",
     );
 
@@ -26,15 +26,17 @@ class GalleryHolder extends Page
     public function getPageSetupFields()
     {
         $fields = self::getDefaultPageSetupFields();
-        $fields->push(CompositeField::create(
-            HeaderField::create("Gallery", 3),
-            CheckboxField::create("SingleGallery"),
-            CheckboxField::create("ShowCaption"),
-            DropdownField::create("GalleryLayout")
-                ->setSource($this->dbObject("GalleryLayout")->enumValues()),
-            DropdownField::create("Columns")->setSource(self::getColumnEnums()),
-            DropdownField::create("Style")->setSource($this->dbObject("Style")->enumValues())
-        ));
+        $fields->push(
+            ToggleCompositeField::create('General', 'General Setup', [
+                HeaderField::create("Gallery", 3),
+                CheckboxField::create("SingleGallery"),
+                CheckboxField::create("ShowCaption"),
+                DropdownField::create("GalleryLayout")
+                    ->setSource($this->dbObject("GalleryLayout")->enumValues()),
+                DropdownField::create("Columns")->setSource(self::getColumnEnums()),
+                DropdownField::create("Style")->setSource($this->dbObject("Style")->enumValues()),
+            ])
+        );
 
         return $fields;
     }
@@ -64,7 +66,7 @@ class GalleryHolder extends Page
         if ($this->Type === 'Category') {
             $galley = ArrayList::create();
             if (count($children)) {
-                foreach ($children as $child) {
+                foreach ( $children as $child ) {
                     if ($child->Image()) {
                         $data = array();
 
