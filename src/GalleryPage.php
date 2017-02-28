@@ -1,9 +1,9 @@
 <?php
-
+/*
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\View\Requirements;
-
+*/
 class GalleryPage extends Page {
 
     public static $icon = 'simple_gallery/images/treeicons/news';

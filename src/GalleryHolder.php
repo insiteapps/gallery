@@ -8,10 +8,11 @@ class GalleryHolder extends Page
     public static $allowed_children = array("GalleryPage");
 
     public static $db = array(
-        'ShowCaption'   => 'Boolean',
+        'ShowCaption' => 'Boolean',
         'SingleGallery' => 'Boolean',
         "GalleryLayout" => "Enum('List,Masonry','List')",
-        "Columns"       => "Int",
+        "Columns" => "Int",
+        "Style" => "Enum('NoSpace,Normal,SmallPadding','Normal')",
         //"Type" => "Enum('Items,Category','Items')",
     );
 
@@ -31,7 +32,8 @@ class GalleryHolder extends Page
             CheckboxField::create("ShowCaption"),
             DropdownField::create("GalleryLayout")
                 ->setSource($this->dbObject("GalleryLayout")->enumValues()),
-            DropdownField::create("Columns")->setSource(self::getColumnEnums())
+            DropdownField::create("Columns")->setSource(self::getColumnEnums()),
+            DropdownField::create("Style")->setSource($this->dbObject("Style")->enumValues())
         ));
 
         return $fields;
@@ -62,7 +64,7 @@ class GalleryHolder extends Page
         if ($this->Type === 'Category') {
             $galley = ArrayList::create();
             if (count($children)) {
-                foreach ( $children as $child ) {
+                foreach ($children as $child) {
                     if ($child->Image()) {
                         $data = array();
 
@@ -102,7 +104,43 @@ class GalleryHolder_Controller extends Page_Controller
         parent::init();
 
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/css/lightgallery.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/justifiedGallery.min.css');
+
+
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
+
+
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
+
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/picturefill.min.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lightgallery.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-fullscreen.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-thumbnail.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-video.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-autoplay.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-zoom.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-hash.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-pager.js');
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/jquery.justifiedGallery.min.js');
+
+        /*
+         *
+         * <link href="/insiteapps-gallery/" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lightgallery.min.css" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.css" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.min.css" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.css" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.min.css" rel="stylesheet">
+    <link href="/insiteapps-gallery/plugIns/lightGallery/css/LightGallery_Custom.css" rel="stylesheet">
+
+         */
+
 
     }
 

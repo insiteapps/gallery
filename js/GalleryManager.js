@@ -33,6 +33,23 @@
                     });
                 }
 
+                // Animated thumbnails
+                var $lightgallery = $('#lightgallery');
+                if ($lightgallery.length) {
+                    /*
+                    $lightgallery.justifiedGallery({
+                        border: 6
+                    }).on('jg.complete', function() {
+                        $lightgallery.lightGallery({
+                            thumbnail: false
+                        });
+                    });
+                    */
+
+                    $lightgallery.lightGallery({
+                        thumbnail: false
+                    });
+                };
 
                 /*
                  jQuery("a[rel^='prettyPhoto']").prettyPhoto({
@@ -64,7 +81,7 @@
                             itemSelector: '.isotopeItem,.item',
                             percentPosition: true
                         });
-                        ThemeManger.setSameAgeSize();
+                     //   ThemeManger.setSameAgeSize();
                     });
 
                     $('#filter a').click(function () {

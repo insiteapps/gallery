@@ -3,4 +3,4 @@
 .profile
 vendor/*
 .sass-cache/*
-/scss
+/support

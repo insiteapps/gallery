@@ -1,3 +1,29 @@
+#GalleryMainContainer {
+  .NoSpaceGallery {
+    .row {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .isotopeItem {
+      margin-bottom: 0;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+  }
+  .SmallPaddingGallery {
+    .row {
+      margin-right: -13px;
+      margin-left: -13px;
+    }
+    .isotopeItem {
+      margin-bottom: 2px;
+      padding-right: 1px;
+      padding-left: 1px;
+    }
+  }
+
+}
 
 ul#Galleries {
   list-style: none;
@@ -19,7 +45,6 @@ ul#Galleries li img {
 ul#Galleries li.lastend {
   margin-right: 0 !important;
 }
-
 
 ul#Galleries li a span {
   display: block;
@@ -291,3 +316,5 @@ nav#filter {
   margin-top: 22px;
   padding: 0;
 }
+
+
