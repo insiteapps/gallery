@@ -1,3 +1,5 @@
+@import "../../app/scss/variables";
+
 #GalleryMainContainer {
   .NoSpaceGallery {
     .row {
@@ -24,6 +26,7 @@
   }
 
 }
+
 
 ul#Galleries {
   list-style: none;
@@ -152,9 +155,10 @@ ul#Galleries li a span {
   position: absolute;
   top: 0;
   left: 15px;
-  background: rgba(79, 175, 194, 1);
-  /*width:100%;*/
-  display: none;
+  //background: rgba(79, 175, 194, 1);
+  /*width:100%;
+  display: none;*/
+  @include opacity(0);
   z-index: 0;
 }
 
@@ -200,8 +204,8 @@ ul#Galleries li a span {
 }
 
 .ie8 .mask {
-  background: white;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  //background: white;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
 /*** MEDIA QUERIES ***/
@@ -263,7 +267,7 @@ ul#Galleries li a span {
 }
 
 .mask {
-  background-color: #C24F4F;
+  //background-color: #C24F4F;
 }
 
 .iconRounded {
