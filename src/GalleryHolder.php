@@ -27,8 +27,7 @@ class GalleryHolder extends Page
     {
         $fields = self::getDefaultPageSetupFields();
         $fields->push(
-            ToggleCompositeField::create('General', 'General Setup', [
-                HeaderField::create("Gallery", 3),
+            ToggleCompositeField::create('GallerySetup', 'Gallery Setup', [
                 CheckboxField::create("SingleGallery"),
                 CheckboxField::create("ShowCaption"),
                 DropdownField::create("GalleryLayout")
@@ -106,17 +105,13 @@ class GalleryHolder_Controller extends Page_Controller
         parent::init();
 
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/css/lightgallery.css');
+        Requirements::css(LIGHTGALLERY_DIR . '/css/lightgallery.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lightgallery.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-fb-comment-box.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-fb-comment-box.min.css');
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-transitions.css');
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/justifiedGallery.min.css');
-
-
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-
+        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/LightGalleryCustom.css');
 
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
 
@@ -130,18 +125,6 @@ class GalleryHolder_Controller extends Page_Controller
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-hash.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-pager.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/jquery.justifiedGallery.min.js');
-
-        /*
-         *
-         * <link href="/insiteapps-gallery/" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lightgallery.min.css" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.css" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.min.css" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.css" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.min.css" rel="stylesheet">
-    <link href="/insiteapps-gallery/plugIns/lightGallery/css/LightGallery_Custom.css" rel="stylesheet">
-
-         */
 
 
     }

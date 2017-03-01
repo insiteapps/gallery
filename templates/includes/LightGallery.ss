@@ -1,11 +1,3 @@
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lightgallery.css" rel="stylesheet">
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lightgallery.min.css" rel="stylesheet">
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.css" rel="stylesheet">
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-fb-comment-box.min.css" rel="stylesheet">
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.css" rel="stylesheet">
-<link href="/insiteapps-gallery/plugIns/lightGallery/css/lg-transitions.min.css" rel="stylesheet">
-<link href="/insiteapps-gallery/css/LightGalleryCustom.css" rel="stylesheet">
-
 
 <div class="LightGalleryContainer {$Style}Gallery">
 
