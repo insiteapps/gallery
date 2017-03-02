@@ -1,2 +1,56 @@
-#GalleryMainContainer .NoSpaceGallery .row{margin-right:0px;margin-left:0px}#GalleryMainContainer .NoSpaceGallery .isotopeItem{margin-bottom:0;padding-right:0px;padding-left:0px}#GalleryMainContainer .SmallPaddingGallery .row{margin-right:-13px;margin-left:-13px}#GalleryMainContainer .SmallPaddingGallery .isotopeItem{margin-bottom:2px;padding-right:1px;padding-left:1px}ul#Galleries{list-style:none;margin:30px 0;padding:0}ul#Galleries li{width:190px;margin:0 15px 20px 0}ul#Galleries li img{height:190px;width:190px;float:left}ul#Galleries li.lastend{margin-right:0 !important}ul#Galleries li a span{display:block;float:left;width:100%;font-weight:700;line-height:30px;height:30px;color:#CB7246;text-decoration:none}#gallery .item{text-align:center;margin-bottom:30px;font-size:12px}#gallery .item h4{font-size:16px;margin-bottom:0}.isotope,.isotope .isotope-item{-webkit-transition-duration:0.8s;-moz-transition-duration:0.8s;-ms-transition-duration:0.8s;-o-transition-duration:0.8s;transition-duration:0.8s}.isotope{-webkit-transition-property:height, width;-moz-transition-property:height, width;-ms-transition-property:height, width;-o-transition-property:height, width;transition-property:height, width}.isotope .isotope-item{-webkit-transition-property:-webkit-transform, opacity;-moz-transition-property:-moz-transform, opacity;-ms-transition-property:-ms-transform, opacity;-o-transition-property:-o-transform, opacity;transition-property:transform, opacity}.isotope.no-transition,.isotope.no-transition .isotope-item,.isotope .isotope-item.no-transition{-webkit-transition-duration:0s;-moz-transition-duration:0s;-ms-transition-duration:0s;-o-transition-duration:0s;transition-duration:0s}#filters,.filters{padding:0;margin:0;margin-bottom:20px}#filters li,.filters li{display:inline-block;margin:0}#filters li a,.filters li a{color:#fff;padding:5px 10px 5px 10px;color:#555;border:solid 1px #ddd;text-decoration:none}#filters li a:hover,.filters li a:hover{border:solid 1px #2bd23b}#filters li a.selected,#filters li a.current,.filters li a.selected,.filters li a.current{background:#2bd23b;border:solid 1px #2bd23b;color:#FFF}.isotope-item{z-index:2}.isotope-hidden.isotope-item{pointer-events:none;z-index:1}.imgHover article{position:relative}.mask{position:absolute;top:0;left:15px;opacity:0;filter:alpha(opacity=0);z-index:0}.iconLinks{display:none;position:relative}.iconLinks a{display:inline-block;text-decoration:none}.iconLinks a:hover i{-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out;transition:all 0.2s ease-out}.iconLinks a span{position:relative;top:-30px;font-size:16px;text-align:center;width:100%;display:block;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-weight:normal}.mediaHover{text-align:center;overflow:hidden;position:absolute;top:0;left:0;width:100%}@media (min-width: 768px){.isotopeItem .iconBig{font-size:33px}.isotopeItem .iconBig.iconRounded{width:80px;height:80px;padding-top:18px}.isotopeItem .iconLinks a span{font-size:10px}}@media (min-width: 992px){.iconBig,.isotopeItem .iconBig{font-size:66px}.iconBig.iconRounded,.isotopeItem .iconBig.iconRounded{width:125px;height:125px;padding-top:28px}.isotopeItem .iconLinks a span{font-size:12px}}.iconLinks a span{color:#fff}.iconRounded{border:2px solid #C24F4F;color:#C24F4F;background-color:#fff}.iconRounded:hover,.color1 .iconRounded:hover{background-color:#C24F4F;color:#fff}.iconRounded{color:#C24F4F}.iconRounded{background-color:#FFF;color:#C24F4F}.iconRounded{border-radius:50%;width:40px;height:40px;display:block;text-align:center;padding-top:11px}.iconRounded:before{margin:auto;text-align:center}.iconBig{font-size:50px}.iconBig.iconRounded{width:112px;height:112px;padding-top:29px;border-width:4px}nav#filter{margin-bottom:22px}nav#filter li{display:inline-block;list-style:none}nav#filter a{background-color:#EEE;color:#555}nav#filter a.current{background-color:#808080;color:#fff}.isotopeItem{margin-bottom:22px}.isotopeItem .boxContent{margin-top:22px;padding:0}
-/*# sourceMappingURL=GalleryManager.css.map */
+/*
+Error: File to import not found or unreadable: ../../app/scss/variables.
+        on line 1 of GalleryManager.scss
+
+1: @import "../../app/scss/variables";
+2: 
+3: #GalleryMainContainer {
+4:   .NoSpaceGallery {
+5:     .row {
+6:       margin-right: 0px;
+
+Backtrace:
+GalleryManager.scss:1
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/engine.rb:295:in `render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:364:in `watch_or_update'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.18/bin/scss:13:in `<top (required)>'
+C:/Ruby22/bin/scss:23:in `load'
+C:/Ruby22/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../../app/scss/variables.\A         on line 1 of GalleryManager.scss\A \A 1: @import \"../../app/scss/variables\";\A 2: \A 3: #GalleryMainContainer {\A 4:   .NoSpaceGallery {\A 5:     .row {\A 6:       margin-right: 0px;"; }
