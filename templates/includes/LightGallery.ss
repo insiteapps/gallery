@@ -10,7 +10,6 @@
                     <img class="img-responsive" src="{$Image.CroppedResize(1200,800).URL}">
 
                 </a>
-
             <% end_loop %>
     </div>
 </div>
