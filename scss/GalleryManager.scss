@@ -6,6 +6,7 @@
       margin-right: 0px;
       margin-left: 0px;
     }
+    .gallery-item,
     .isotopeItem {
       margin-bottom: 0;
       padding-right: 0px;
@@ -18,15 +19,14 @@
       margin-right: -13px;
       margin-left: -13px;
     }
+    .gallery-item,
     .isotopeItem {
-      margin-bottom: 2px;
-      padding-right: 1px;
-      padding-left: 1px;
+      margin-bottom: 1px;
+      padding: 0 1px;
     }
   }
 
 }
-
 
 ul#Galleries {
   list-style: none;

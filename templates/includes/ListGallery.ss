@@ -1,12 +1,12 @@
-<div class="row portfolio-items isotopeWrapper clearfix imgHover">
+<div class="row portfolio-items isotopeWrapper clearfix imgHover {$Style}Gallery">
 
     <% loop $GalleryItems %>
 
         <article class="col-sm-{$Top.ColumnsSpanWidth} isotopeItem {$SegmentFilter}">
             <section class="imgWrapper">
 
-                <a href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
-                   class="image-link" title="Zoom" data-gallery="{$ChildImageList}">
+                <a data-fancybox="gallery" href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
+                   class="image-linkk" title="Zoom" data-gallery="{$ChildImageList}">
                     <img alt="" src="{$Image.CroppedResize(800,600).URL}"
                          class="img-responsive">
                 </a>

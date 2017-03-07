@@ -10,7 +10,7 @@ class GalleryHolder extends Page
     public static $db = array(
         'ShowCaption'   => 'Boolean',
         'SingleGallery' => 'Boolean',
-        "GalleryLayout" => "Enum('ListGallery,MasonryGallery,LightGallery','ListGallery')",
+        "GalleryLayout" => "Enum('ListGallery,MasonryGallery','ListGallery')",
         "Columns"       => "Int",
         "Style"         => "Enum('NoSpace,Normal,SmallPadding','Normal')",
         //"Type" => "Enum('Items,Category','Items')",

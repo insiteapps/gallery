@@ -1,5 +1,5 @@
 
-<div class="isotopeContainer gallery-grid gallery-masonry row clearfix" data-gallery-hidden-on-page-load="true">
+<div class="isotopeContainer gallery-grid gallery-masonry row clearfix {$Style}Gallery" data-gallery-hidden-on-page-load="true">
     <div class="gallery-loader"></div>
 
     <% loop $GalleryItems %>
