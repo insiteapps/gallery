@@ -2,7 +2,7 @@
 
     <% loop $GalleryItems %>
 
-        <article class="col-sm-{$Top.ColumnsSpanWidth} isotopeItem {$SegmentFilter}">
+        <article class="{$Up.ColumnsClasses}  isotopeItem {$SegmentFilter}">
             <section class="imgWrapper">
 
                 <a data-fancybox="gallery" href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
