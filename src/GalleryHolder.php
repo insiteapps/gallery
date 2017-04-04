@@ -104,6 +104,9 @@ class GalleryHolder_Controller extends Page_Controller
     {
         parent::init();
 
+        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
+
+        /*
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
         Requirements::css(LIGHTGALLERY_DIR . '/css/lightgallery.css');
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lightgallery.css');
@@ -113,8 +116,7 @@ class GalleryHolder_Controller extends Page_Controller
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/justifiedGallery.min.css');
         Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/LightGalleryCustom.css');
 
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
-
+        
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/picturefill.min.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lightgallery.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-fullscreen.js');
@@ -125,7 +127,7 @@ class GalleryHolder_Controller extends Page_Controller
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-hash.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-pager.js');
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/jquery.justifiedGallery.min.js');
-
+*/
 
     }
 
