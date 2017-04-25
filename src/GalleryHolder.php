@@ -23,9 +23,9 @@ class GalleryHolder extends Page
     public static $defaults = array();
 
 
-    public function getPageSetupFields()
+    public function getManagerFields()
     {
-        $fields = self::getDefaultPageSetupFields();
+        $fields = parent::getManagerFields();
         $fields->push(
             ToggleCompositeField::create('GallerySetup', 'Gallery Setup', [
                 CheckboxField::create("SingleGallery"),
