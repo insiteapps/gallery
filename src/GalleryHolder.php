@@ -36,7 +36,7 @@ class GalleryHolder extends Page
                 DropdownField::create("Style")->setSource($this->dbObject("Style")->enumValues()),
             ])
         );
-
+        $this->extend('updateManagerFields', $fields);
         return $fields;
     }
 
