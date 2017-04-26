@@ -106,29 +106,6 @@ class GalleryHolder_Controller extends Page_Controller
 
         Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/GalleryManager.js');
 
-        /*
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/GalleryManager.css');
-        Requirements::css(LIGHTGALLERY_DIR . '/css/lightgallery.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lightgallery.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-fb-comment-box.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-fb-comment-box.min.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/lg-transitions.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/justifiedGallery.min.css');
-        Requirements::css(INSITEAPPS_GALLERY_DIR . '/css/LightGalleryCustom.css');
-
-        
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/picturefill.min.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lightgallery.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-fullscreen.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-thumbnail.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-video.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-autoplay.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-zoom.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-hash.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/plugIns/lightGallery/js/lg-pager.js');
-        Requirements::javascript(INSITEAPPS_GALLERY_DIR . '/js/jquery.justifiedGallery.min.js');
-*/
-
     }
 
 
