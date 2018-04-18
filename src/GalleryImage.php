@@ -17,12 +17,12 @@ class GalleryImage extends DataObject
     private static $has_many = array(
         'Images' => 'GallerySubImage'
     );
-    static $summary_fields = array(
+  private  static $summary_fields = array(
         'Thumbnail',
         'Name'
     );
-
-    function ChildImageList(){
+    
+    public  function ChildImageList(){
        $images = $this->Images();
         if(count($images)){
             $AttachmentIDs =  $images->column("AttachmentID");
@@ -48,22 +48,27 @@ class GalleryImage extends DataObject
 
         return $f;
     }
-
-    function SegmentFilter()
+    
+    public  function SegmentFilter()
     {
-        $parent = ($pId = $this->GalleryPageID) ? $this->GalleryPage() : $this->Gallery();
-        return $parent->URLSegment;
+        //   $parent = ($pId = $this->GalleryPageID) ? $this->GalleryPage() : $this->Gallery();
+        if($this->GalleryPageID){
+            $parent = $this->GalleryPage();
+            return $parent->URLSegment;
+        }
+       
+        return false;
     }
-
-    function getThumbnail()
+    
+    public  function getThumbnail()
     {
         $image = $this->Attachment();
         if ($image && $image->ID) {
             return $image->CMSThumbnail();
         }
     }
-
-    function Image()
+    
+    public  function Image()
     {
         $img = $this->Attachment();
         if ($img && $img->ID) {
