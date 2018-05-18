@@ -1,0 +1,3 @@
+Director:
+  rules:
+    'gllry//$Action/$ID/$OtherID': 'InsiteApps\Gallery\GalleryController'

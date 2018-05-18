@@ -16,7 +16,9 @@
 
     });
 
-
+    var _e = function () {
+        alert('Sorry there has been an error');
+    };
     var GalleryManager = function () {
 
 
@@ -33,6 +35,27 @@
                     });
                 }
 
+
+                var ListGallery = $('.loadBlockListGallery');
+                ListGallery.each(function () {
+                    var t = $(this), block_id = t.data('blockid');
+
+                    jQuery.ajax({
+                        url: 'gllry/load/' + block_id,
+                        type:  'post',
+                        dataType:   'html',
+                        data: null,
+                        success: function (d) {
+                            t.html(d).promise().done(function(){
+                                GalleryManager.initIsotope();
+                            });
+                        },
+                        error: function () {
+                            alert('Sorry there has been an error');
+                        }
+                    });
+
+                });
                 // Animated thumbnails
                 var $lightgallery = $('#lightgallery');
                 if ($lightgallery.length) {
@@ -49,7 +72,8 @@
                     $lightgallery.lightGallery({
                         thumbnail: false
                     });
-                };
+                }
+                ;
 
                 /*
                  jQuery("a[rel^='prettyPhoto']").prettyPhoto({
@@ -59,6 +83,58 @@
                  autoplay_slideshow: true
                  });
                  */
+            },
+            initIsotope: function () {
+                if ($('.isotopeWrapper,.isotopeContainer').length) {
+
+                    var $container = $('.isotopeWrapper,.isotopeContainer');
+                    var $resize = $('.isotopeWrapper,.isotopeContainer').attr('id');
+                    // initialize isotope
+
+                    $container.isotope({
+                        itemSelector: '.isotopeItem,.item',
+                        resizable: false, // disable normal resizing
+                        masonry: {
+                            columnWidth: $container.width() / $resize
+                        }
+
+
+                    });
+                    var $grid = $container.imagesLoaded(function () {
+                        $grid.isotope({
+                            itemSelector: '.isotopeItem,.item',
+                            percentPosition: true
+                        });
+                        //   ThemeManger.setSameAgeSize();
+                    });
+
+                    $('#filter a').click(function () {
+                        $('#filter a').removeClass('current');
+                        $(this).addClass('current');
+                        var selector = $(this).attr('data-filter');
+                        $container.isotope({
+                            filter: selector,
+                            animationOptions: {
+                                duration: 1000,
+                                easing: 'easeOutQuart',
+                                queue: false
+                            }
+                        });
+                        return false;
+                    });
+
+
+                    $(window).smartresize(function () {
+                        $container.isotope({
+                            // update columnWidth to a percentage of container width
+                            masonry: {
+                                columnWidth: $container.width() / $resize
+                            }
+                        });
+                    });
+
+
+                }
             },
             initializeLiveHandlers: function () {
                 if ($('.isotopeWrapper,.isotopeContainer').length) {
@@ -81,7 +157,7 @@
                             itemSelector: '.isotopeItem,.item',
                             percentPosition: true
                         });
-                     //   ThemeManger.setSameAgeSize();
+                        //   ThemeManger.setSameAgeSize();
                     });
 
                     $('#filter a').click(function () {
