@@ -2,73 +2,73 @@
 
 .GalleryMainContainer,
 #GalleryMainContainer {
-    .NoSpaceGallery {
-        .row {
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-        .gallery-item,
-        .isotopeItem {
-            margin-bottom: 0;
-            padding-right: 0px;
-            padding-left: 0px;
-        }
+  .NoSpaceGallery {
+    .row {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .gallery-item,
+    .isotopeItem {
+      margin-bottom: 0;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
 
+  }
+  .SmallPaddingGallery {
+    .row {
+      margin-right: -13px;
+      margin-left: -13px;
     }
-    .SmallPaddingGallery {
-        .row {
-            margin-right: -13px;
-            margin-left: -13px;
-        }
-        .gallery-item,
-        .isotopeItem {
-            margin-bottom: 1px;
-            padding: 0 1px;
-        }
+    .gallery-item,
+    .isotopeItem {
+      margin-bottom: 1px;
+      padding: 0 1px;
     }
+  }
 
 }
 
 ul#Galleries {
-    list-style: none;
-    margin: 30px 0;
-    padding: 0
+  list-style: none;
+  margin: 30px 0;
+  padding: 0
 }
 
 ul#Galleries li {
-    width: 190px;
-    margin: 0 15px 20px 0;
+  width: 190px;
+  margin: 0 15px 20px 0;
 }
 
 ul#Galleries li img {
-    height: 190px;
-    width: 190px;
-    float: left;
+  height: 190px;
+  width: 190px;
+  float: left;
 }
 
 ul#Galleries li.lastend {
-    margin-right: 0 !important;
+  margin-right: 0 !important;
 }
 
 ul#Galleries li a span {
-    display: block;
-    float: left;
-    width: 100%;
-    font-weight: 700;
-    line-height: 30px;
-    height: 30px;
-    color: #CB7246;
-    text-decoration: none;
+  display: block;
+  float: left;
+  width: 100%;
+  font-weight: 700;
+  line-height: 30px;
+  height: 30px;
+  color: #CB7246;
+  text-decoration: none;
 }
 
 #gallery .item {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 12px;
-    h4 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 12px;
+  h4 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
 }
 
 /* --------------------------------------------------
@@ -76,28 +76,28 @@ ul#Galleries li a span {
 /* -------------------------------------------------- */
 .isotope,
 .isotope .isotope-item {
-    /* change duration value to whatever you like */
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    -ms-transition-duration: 0.8s;
-    -o-transition-duration: 0.8s;
-    transition-duration: 0.8s;
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 
 .isotope {
-    -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
-    -ms-transition-property: height, width;
-    -o-transition-property: height, width;
-    transition-property: height, width;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
 }
 
 .isotope .isotope-item {
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
-    -ms-transition-property: -ms-transform, opacity;
-    -o-transition-property: -o-transform, opacity;
-    transition-property: transform, opacity;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
 }
 
 /**** disabling Isotope CSS3 transitions ****/
@@ -105,108 +105,108 @@ ul#Galleries li a span {
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
-    -webkit-transition-duration: 0s;
-    -moz-transition-duration: 0s;
-    -ms-transition-duration: 0s;
-    -o-transition-duration: 0s;
-    transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
 }
 
 #filters, .filters {
-    padding: 0;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  li {
+    display: inline-block;
     margin: 0;
-    margin-bottom: 20px;
-    li {
-        display: inline-block;
-        margin: 0;
-        a {
-            color: #fff;
-            padding: 5px 10px 5px 10px;
-            color: #555;
-            border: solid 1px #ddd;
-            text-decoration: none;
-            &:hover {
-                border: solid 1px #2bd23b;
-            }
-            &.selected,
-            &.current {
-                background: #2bd23b;
-                border: solid 1px #2bd23b;
-                color: #FFF;
-            }
-        }
+    a {
+      color: #fff;
+      padding: 5px 10px 5px 10px;
+      color: #555;
+      border: solid 1px #ddd;
+      text-decoration: none;
+      &:hover {
+        border: solid 1px #2bd23b;
+      }
+      &.selected,
+      &.current {
+        background: #2bd23b;
+        border: solid 1px #2bd23b;
+        color: #FFF;
+      }
     }
+  }
 }
 
 .isotope-item {
-    z-index: 2;
+  z-index: 2;
 }
 
 .isotope-hidden.isotope-item {
-    pointer-events: none;
-    z-index: 1;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /*** hover images ***/
 .imgHover article {
-    position: relative;
+  position: relative;
 }
 
 .mask {
-    position: absolute;
-    top: 0;
-    left: 15px;
-    //background: rgba(79, 175, 194, 1);
-    /*width:100%;
-    display: none;*/
-    @include opacity(0);
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  //background: rgba(79, 175, 194, 1);
+  /*width:100%;
+  display: none;*/
+  @include opacity(0);
+  z-index: 0;
 }
 
 .iconLinks {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
 }
 
 .iconLinks a {
-    display: inline-block;
-    text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
 
 }
 
 .iconLinks a:hover i {
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .iconLinks a span {
-    position: relative;
-    top: -30px;
-    font-size: 16px;
-    text-align: center;
-    width: 100%;
-    display: block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
+  position: relative;
+  top: -30px;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 
 }
 
 .mediaHover {
-    text-align: center;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
 }
 
 .ie8 .mask {
-    //background: white;
-    //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  //background: white;
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
 /*** MEDIA QUERIES ***/
@@ -215,111 +215,118 @@ ul#Galleries li a span {
 }
 
 @media(min-width: 768px) {
-    .isotopeItem .iconBig {
-        font-size: 33px;
-    }
-    .isotopeItem .iconBig.iconRounded {
-        width: 80px;
-        height: 80px;
-        padding-top: 18px;
-    }
-    .isotopeItem .iconLinks a span {
-        font-size: 10px;
-    }
+  .isotopeItem .iconBig {
+    font-size: 33px;
+  }
+  .isotopeItem .iconBig.iconRounded {
+    width: 80px;
+    height: 80px;
+    padding-top: 18px;
+  }
+  .isotopeItem .iconLinks a span {
+    font-size: 10px;
+  }
 }
 
 @media(min-width: 992px) {
-    .iconBig, .isotopeItem .iconBig {
-        font-size: 66px;
-    }
-    .iconBig.iconRounded, .isotopeItem .iconBig.iconRounded {
-        width: 125px;
-        height: 125px;
-        padding-top: 28px;
-    }
-    .isotopeItem .iconLinks a span {
-        font-size: 12px;
-    }
+  .iconBig, .isotopeItem .iconBig {
+    font-size: 66px;
+  }
+  .iconBig.iconRounded, .isotopeItem .iconBig.iconRounded {
+    width: 125px;
+    height: 125px;
+    padding-top: 28px;
+  }
+  .isotopeItem .iconLinks a span {
+    font-size: 12px;
+  }
 }
 
 .iconLinks a span {
-    color: #fff;
+  color: #fff;
 }
 
 /*** icons ***/
 .iconRounded {
-    border: 2px solid #C24F4F;
-    color: #C24F4F;
-    background-color: #fff;
+  border: 2px solid #C24F4F;
+  color: #C24F4F;
+  background-color: #fff;
 }
 
 .iconRounded:hover, .color1 .iconRounded:hover {
-    background-color: #C24F4F;
-    color: #fff;
+  background-color: #C24F4F;
+  color: #fff;
 }
 
 .iconRounded {
-    color: #C24F4F;
+  color: #C24F4F;
 }
 
 .iconRounded {
-    background-color: #FFF;
-    color: #C24F4F;
+  background-color: #FFF;
+  color: #C24F4F;
 }
 
 .mask {
-    //background-color: #C24F4F;
+  //background-color: #C24F4F;
 }
 
 .iconRounded {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: block;
-    text-align: center;
-    padding-top: 11px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  padding-top: 11px;
 
 }
 
 .iconRounded:before {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 .iconBig {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .iconBig.iconRounded {
-    width: 112px;
-    height: 112px;
-    padding-top: 29px;
-    border-width: 4px;
+  width: 112px;
+  height: 112px;
+  padding-top: 29px;
+  border-width: 4px;
 }
 
 nav#filter {
-    margin-bottom: 22px;
-    li {
-        display: inline-block;
-        list-style: none;
+  margin-bottom: 22px;
+  li {
+    display: inline-block;
+    list-style: none;
+  }
+  a {
+    background-color: #EEE;
+    color: #555;
+    &.current {
+      background-color: #808080;
+      color: #fff;
     }
-    a {
-        background-color: #EEE;
-        color: #555;
-        &.current {
-            background-color: #808080;
-            color: #fff;
-        }
-    }
+  }
 }
 
 .isotopeItem {
-    margin-bottom: 22px;
+  margin-bottom: 22px;
 }
 
 .isotopeItem .boxContent {
-    margin-top: 22px;
-    padding: 0;
+  margin-top: 22px;
+  padding: 0;
 }
 
+.loadBlockListGallery {
+  .AjaxLoading {
+    z-index: 99999;
+    background-color: #fff;
+    background-position-y: 10%;
+  }
+}
 
