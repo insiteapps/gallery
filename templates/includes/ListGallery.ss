@@ -5,7 +5,7 @@
         <article class="{$Up.ColumnsClasses}  isotopeItem {$SegmentFilter}">
             <section class="imgWrapper">
                 <% if $VideoCode %>
-                    <a class="popup-youtube" href="//www.youtube.com/watch?v={$VideoCode}">
+                    <a class="popup-youtube gh" href="{$VideoCode}">
 
                         <img alt="" src="{$Image.CroppedResize(800,600).URL}"
                              class="img-responsive">
@@ -14,7 +14,7 @@
 
                     </a>
                 <% else %>
-                <a data-fancybox="gallery" g href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
+                <a data-fancybox="gallery" href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
                    class="image-linkk" title="Zoom" data-gallery="{$ChildImageList}">
                     <img alt="" src="{$Image.CroppedResize(800,600).URL}"
                          class="img-responsive">
