@@ -133,6 +133,7 @@
 
 
                             });
+                            $('.loadBlockListGallery .AjaxLoading').hide();
                         },
                         error: function () {
                             alert('Sorry there has been an error');
