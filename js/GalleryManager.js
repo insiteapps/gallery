@@ -67,6 +67,8 @@
                             });
                         });
 
+                        setInterval(function(){  $container.isotope('layout'); }, 4000);
+
                         $(document).on('click', '#filter a', function (e) {
                             e.preventDefault();
                             $('#filter a').removeClass('current');
