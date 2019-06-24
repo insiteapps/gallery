@@ -108,57 +108,7 @@
 
                         $('.loadBlockListGallery .AjaxLoading').hide();
                     });
-                    jQuery.ajax({
-                        url: 'gllry/load/' + block_id,
-                        type: 'post',
-                        dataType: 'html',
-                        data: null,
-                        success: function (d) {
-                            t.find('.gallery-inneddr').html(d).promise().done(function () {
 
-
-                                if ($('.isotopeWrapper,.isotopeContainer').length) {
-
-                                    var $container = $('.isotopeWrapper,.isotopeContainer');
-                                    var $resize = $('.isotopeWrapper,.isotopeContainer').attr('id');
-                                    // initialize isotope
-
-                                    $container.isotope({
-                                        itemSelector: '.isotopeItem,.item',
-                                        //resizable: false, // disable normal resizing
-                                        masonry: {
-                                            columnWidth: $container.width() / $resize
-                                        }
-
-
-                                    });
-
-                                    $container.imagesLoaded().progress(function () {
-                                        $container.isotope('layout');
-                                        $('.loadBlockListGallery .AjaxLoading').hide();
-                                    });
-
-                                    /*
-                                    var $grid = $container.imagesLoaded(function () {
-                                        $grid.isotope({
-                                            itemSelector: '.isotopeItem,.item',
-                                            percentPosition: true
-                                        });
-                                        $('.loadBlockListGallery .AjaxLoading').hide();
-                                    });
-                                    */
-
-
-                                }
-
-
-                            });
-                            $('.loadBlockListGallery .AjaxLoading').hide();
-                        },
-                        error: function () {
-                            alert('Sorry there has been an error');
-                        }
-                    });
 
                 });
                 // Animated thumbnails
