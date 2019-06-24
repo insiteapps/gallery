@@ -39,14 +39,82 @@
                 var ListGallery = $('.loadBlockListGallery');
                 ListGallery.each(function () {
                     var t = $(this), block_id = t.data('blockid');
+                    t.find('.gallery-inner').load('gllry/load/' + block_id, function (data) {
+                        var $container = $('.isotopeWrapper,.isotopeContainer');
+                        var $resize = $('.isotopeWrapper,.isotopeContainer').attr('id');
+                        // initialize isotope
 
+                        $container.isotope({
+                            itemSelector: '.isotopeItem,.item',
+                            resizable: false, // disable normal resizing
+                            masonry: {
+                                columnWidth: $container.width() / $resize
+                            }
+
+
+                        });
+
+                        $container.imagesLoaded().progress(function () {
+                            $container.isotope('layout');
+
+                        });
+
+                        $(document).on('click', '#filter a', function (e) {
+                            e.preventDefault();
+                            $('#filter a').removeClass('current');
+                            $(this).addClass('current');
+                            var selector = $(this).attr('data-filter');
+                            $container.isotope({
+                                filter: selector,
+                                animationOptions: {
+                                    duration: 1000,
+                                    easing: 'easeOutQuart',
+                                    queue: false
+                                }
+                            });
+                            $container.one('arrangeComplete', function () {
+
+                                $('.gallery-item' + selector + ' .popup-gallery').magnificPopup({
+                                    type: 'image',
+
+                                    tLoading: 'Loading image #%curr%...',
+                                    mainClass: 'mfp-img-mobile',
+                                    gallery: {
+                                        enabled: true,
+                                        navigateByImgClick: true,
+                                        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                                    },
+                                    image: {
+                                        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                                        titleSrc: function (item) {
+                                            return item.el.attr('title');
+                                        }
+                                    }
+                                });
+
+                            });
+
+                            return false;
+                        });
+
+                        $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                            disableOn: 700,
+                            type: 'iframe',
+                            mainClass: 'mfp-fade',
+                            removalDelay: 160,
+                            preloader: false,
+                            fixedContentPos: false
+                        });
+
+                        $('.loadBlockListGallery .AjaxLoading').hide();
+                    });
                     jQuery.ajax({
                         url: 'gllry/load/' + block_id,
                         type: 'post',
                         dataType: 'html',
                         data: null,
                         success: function (d) {
-                            t.find('.gallery-inner').html(d).promise().done(function () {
+                            t.find('.gallery-inneddr').html(d).promise().done(function () {
 
 
                                 if ($('.isotopeWrapper,.isotopeContainer').length) {
@@ -57,7 +125,7 @@
 
                                     $container.isotope({
                                         itemSelector: '.isotopeItem,.item',
-                                        resizable: false, // disable normal resizing
+                                        //resizable: false, // disable normal resizing
                                         masonry: {
                                             columnWidth: $container.width() / $resize
                                         }
@@ -80,56 +148,8 @@
                                     });
                                     */
 
-                                    $(document).on('click', '#filter a', function (e) {
-                                        e.preventDefault();
-                                        $('#filter a').removeClass('current');
-                                        $(this).addClass('current');
-                                        var selector = $(this).attr('data-filter');
-                                        $container.isotope({
-                                            filter: selector,
-                                            animationOptions: {
-                                                duration: 1000,
-                                                easing: 'easeOutQuart',
-                                                queue: false
-                                            }
-                                        });
-                                        $container.one('arrangeComplete', function () {
-
-                                            $('.gallery-item' + selector + ' .popup-gallery').magnificPopup({
-                                                type: 'image',
-
-                                                tLoading: 'Loading image #%curr%...',
-                                                mainClass: 'mfp-img-mobile',
-                                                gallery: {
-                                                    enabled: true,
-                                                    navigateByImgClick: true,
-                                                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                                                },
-                                                image: {
-                                                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                                                    titleSrc: function (item) {
-                                                        return item.el.attr('title');
-                                                    }
-                                                }
-                                            });
-
-                                        });
-
-                                        return false;
-                                    });
-
 
                                 }
-
-                                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-                                    disableOn: 700,
-                                    type: 'iframe',
-                                    mainClass: 'mfp-fade',
-                                    removalDelay: 160,
-                                    preloader: false,
-                                    fixedContentPos: false
-                                });
-
 
 
                             });
