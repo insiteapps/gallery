@@ -56,7 +56,15 @@
 
                         $container.imagesLoaded().progress(function () {
                             $container.isotope('layout');
+                            $container.isotope({
+                                itemSelector: '.isotopeItem,.item',
+                                resizable: false, // disable normal resizing
+                                masonry: {
+                                    columnWidth: $container.width() / $resize
+                                }
 
+
+                            });
                         });
 
                         $(document).on('click', '#filter a', function (e) {
@@ -96,7 +104,7 @@
 
                             return false;
                         });
-
+                        $container.isotope('layout');
                         $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                             disableOn: 700,
                             type: 'iframe',
@@ -108,7 +116,6 @@
 
                         $('.loadBlockListGallery .AjaxLoading').hide();
                     });
-
 
                 });
                 // Animated thumbnails
