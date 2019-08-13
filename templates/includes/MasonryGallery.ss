@@ -10,7 +10,7 @@
                     <i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i>
                 </a>
             <% else %>
-                <a href="{$Image.URL}" title="{$Name}" class="img-mask-effect fade popup-gallery"
+                <a data-fancybox="gallery" href="{$Image.URL}" title="{$Name}" class="img-mask-effect fade popup-gallery"
                    data-lightbox="main-gallery">
                     <img src="{$Image.URL}" alt="{$Name}"/>
                     <i class="mask"><span class="glyphicon glyphicon-search"></span></i>
