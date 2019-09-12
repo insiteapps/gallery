@@ -16,28 +16,20 @@
  *
  */
 
-/**
- * @namespace InsiteApps\Gallery
- * @class     GalleryController
- * @package   builder
- * @year      2018
- * @file      GalleryController
- * @author    Itayi Patrick
- */
-
-
 namespace InsiteApps\Gallery;
 
 use InsiteMainController;
 
 class GalleryController extends InsiteMainController
 {
+    
     private static $allowed_actions = array(
         'load',
     );
     
     public function Link( $action = null )
     {
+        
         return "gllry/$action";
     }
     
@@ -55,13 +47,14 @@ class GalleryController extends InsiteMainController
     
     public function load()
     {
+        
         $block_id = $this->urlParamsID();
         
         if ( $block_id ) {
             $oGalleryBlock = \GalleryBlockSection::get()->byID( $block_id );
             
-          return $oGalleryBlock->renderWith( $oGalleryBlock->GalleryLayout );
-          
+            return $oGalleryBlock->renderWith( $oGalleryBlock->GalleryLayout );
+            
         }
         
         
