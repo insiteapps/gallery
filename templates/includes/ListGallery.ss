@@ -5,7 +5,7 @@
         <article class="{$Up.ColumnsClasses}  isotopeItem {$SegmentFilter}">
             <section class="imgWrapper">
                 <% if $VideoCode %>
-                    <a class="popup-youtube gh" href="{$VideoCode}">
+                    <a class="popup-youtube" title="{$Name}" href="//www.youtube.com/watch?v={$VideoCode}">
 
                         <img alt="" src="{$Image.CroppedResize(800,600).URL}"
                              class="img-responsive">
