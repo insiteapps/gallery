@@ -21,7 +21,7 @@
     };
     var GalleryManager = function () {
 
-        function InitGallery(){
+        function InitGallery() {
             var $container = $('.isotopeWrapper,.isotopeContainer');
             var $resize = $('.isotopeWrapper,.isotopeContainer').attr('id');
             // initialize isotope
@@ -49,7 +49,9 @@
                 });
             });
 
-            setInterval(function(){  $container.isotope('layout'); }, 3000);
+            setInterval(function () {
+                $container.isotope('layout');
+            }, 3000);
 
             $(document).on('click', '#filter a', function (e) {
                 e.preventDefault();
