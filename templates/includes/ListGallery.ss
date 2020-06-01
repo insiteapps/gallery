@@ -14,14 +14,10 @@
 
                     </a>
                 <% else %>
-<%--                <a data-fancybox="gallery" href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
-                   class="image-linkk" title="Zoom" data-gallery="{$ChildImageList}">
-                    <img alt="" src="{$Image.CroppedResize(800,600).URL}"
-                         class="img-responsive">
-                </a>--%>
-                    <a data-fancybox="gallery" title="{$Name}" g
+
+                    <a data-fancyboxx="gallery" title="{$Name}" g
                        href="<% if $Category %>$LargeImage.URL<% else %>$Image.URL<% end_if %>"
-                       class="image-linkk" data-gallery="{$ChildImageList}">
+                       class="image-linkk fancybox-gallery" data-gallery="{$ChildImageList}">
                         <img alt="{$Name}" src="{$Image.CroppedResize(800,600).URL}"
                              class="img-responsive">
                     </a>
