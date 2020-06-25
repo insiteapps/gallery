@@ -35,7 +35,7 @@ class GalleryPage extends Page
         return $f;
     }
 
-    public function canCreate($member = null)
+    public function canCreateee($member = null)
     {
         return false;
     }
